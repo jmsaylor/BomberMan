@@ -1,8 +1,8 @@
 package com.johnsaylor.cellState;
 
 import com.johnsaylor.Cell;
-import com.johnsaylor.explosion.Command;
-import com.johnsaylor.explosion.DetonateCommand;
+import com.johnsaylor.detonator.Command;
+import com.johnsaylor.detonator.DetonateCommand;
 
 import java.util.List;
 
@@ -22,7 +22,6 @@ public class BombState implements CellState {
         counter--;
         if (counter == 0) {
             detonator.execute();
-            explode();
         }
     }
 

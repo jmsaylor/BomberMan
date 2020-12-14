@@ -1,8 +1,7 @@
-package com.johnsaylor.explosion;
+package com.johnsaylor.detonator;
 
 import com.johnsaylor.Cell;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class DetonateCommand implements Command{

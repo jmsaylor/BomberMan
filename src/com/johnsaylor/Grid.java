@@ -65,12 +65,28 @@ public class Grid {
 //        if (row - 1 > 0 && column + 1 < rowLength) result.add(grid[row - 1][column + 1]);
 
         if (column - 1 >= 0) result.add(grid[row][column - 1]);
+        result.add(grid[row][column]);
         if (column + 1 < rowLength) result.add(grid[row][column + 1]);
 
 //        if (row + 1 < height && column - 1 > 0) result.add(grid[row + 1][column - 1]);
         if (row + 1 < height) result.add(grid[row + 1][column]);
 //        if (row + 1 < height && column + 1 < rowLength) result.add(grid[row + 1][column + 1]);
         return result;
+    }
+
+    public void continuous() {
+        printGrid();
+        fillStep();
+        while (true) {
+            try {
+                Thread.sleep(1000);
+                waitStep();
+                Thread.sleep(1000);
+                fillStep();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 }

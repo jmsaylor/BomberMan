@@ -32,9 +32,7 @@ public class Cell {
         this.state = bomb;
     }
 
-    public void setEmpty() {
-        this.state = empty;
-    }
+    public void setEmpty() { this.state = empty; }
 
     public void createBomb(List<Cell> blastRadius) {
         this.bomb = new BombState(this, blastRadius);
